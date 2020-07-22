@@ -22,3 +22,10 @@ if('serviceWorker' in navigator) {
         });
     });
 };
+
+//Install prompt
+let biPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    biPrompt = e;
+});

@@ -22,3 +22,9 @@ button:active {
     color: #ecf0f1;
     border: 1px solid black;
 }
+button#installBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 70%;
+}
