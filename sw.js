@@ -1,10 +1,11 @@
 const cacheName = 'cache-v1';
 const resourcesToPrecache = [
     '/',
-    'index.html',
-    'images/icon-192.png',
-    'images/icon-512.png',
-    'manifest.webmanifest'
+    '/index.html',
+    '/images/icon-192.png',
+    '/images/icon-512.png',
+    '/main.css',
+    '/main.js'
 ];
 
 self.addEventListener('install', event => {

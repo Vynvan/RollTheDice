@@ -11,6 +11,7 @@ button.addEventListener('click', () => {
     pips.innerHTML = RollTheDice();
 });
 
+//Serviceworker registration
 if('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
