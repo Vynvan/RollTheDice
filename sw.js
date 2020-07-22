@@ -14,6 +14,8 @@ self.addEventListener('install', event => {
         caches.open(cacheName)
         .then(cache => {
             return cache.addAll(resourcesToPrecache);
+        }).catch(err => {
+            console.log('Caching failed: ', err);
         })
     )
 });
@@ -27,6 +29,8 @@ self.addEventListener('fetch', event => {
     event.respondWith(caches.match(event.request)
         .then(cachedResponse => {
             return cachedResponse || fetch(event.request);
+        }).catch(err => {
+            console.log('Fetching failed: ', err);
         })
     );
 });
