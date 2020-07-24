@@ -26,9 +26,9 @@ if('serviceWorker' in navigator) {
 
 //Catch the BeforeInstall prompt
 let biPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    biPrompt = e;
+window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+    biPrompt = event;
 });
 
 //Configure the "Add to homescreen"-button to use the BeforeInstall prompt if it exists
@@ -43,10 +43,4 @@ ibtn.addEventListener('click', () => {
             biPrompt = null;
         })
     }
-});
-
-//Don't show the "Add to homescreen"-button in the installed app
-window.addEventListener('appinstalled', () => {
-    var add2hs = window.getElementById('add2hs');
-    add2hs.parentNode.removeChild(add2hs);
 });

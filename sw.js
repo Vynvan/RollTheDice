@@ -1,11 +1,11 @@
 const cacheName = 'cache-v1';
 const resourcesToPrecache = [
     '/',
-    '/index.html',
-    '/images/icon-192.png',
-    '/images/icon-512.png',
-    '/main.css',
-    '/main.js'
+    'index.html',
+    'images/icon-192.png',
+    'images/icon-512.png',
+    'main.css',
+    'main.js'
 ];
 
 self.addEventListener('install', event => {
@@ -20,8 +20,8 @@ self.addEventListener('install', event => {
     )
 });
 
-self.addEventListener('activate', event => {
-    console.log('Activate event!');
+self.addEventListener('activate', () => {
+    console.log('ServiceWorker activated!');
 });
 
 self.addEventListener('fetch', event => {

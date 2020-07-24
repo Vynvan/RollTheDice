@@ -35,7 +35,7 @@ button:active {
  Components:
  */
 main {
-    min-height: 100vh;
+    height: 100vh;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -59,6 +59,12 @@ main {
 }
 #add2hs button {
     padding: 2px 16px;
+}
+@media all and (display-mode: standalone) {
+    #add2hs {
+        display: hidden;
+        animation: none;
+    }
 }
 
 @keyframes moveUp {
