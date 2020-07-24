@@ -18,7 +18,7 @@
     "start_url": "index.html",
     "background_color": "#8e44ad",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/RollTheDice/",
     "theme_color": "#ecf0f1",
     "shortcuts": []
   }
