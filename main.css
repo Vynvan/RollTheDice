@@ -54,7 +54,7 @@ main {
     animation: moveUp 1s ease-out 3s forwards;
 }
 #add2hs span {
-    font: 40% normal;
+    font: 35% normal;
     margin-right: -6px;
 }
 #add2hs button {
